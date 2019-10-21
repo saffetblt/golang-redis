@@ -9,8 +9,8 @@ import (
 )
 
 type Rule struct {
-	Kaynak      string `json:"Kaynak"`
-	Activite    string `json:"Activite"`
+	Source      string `json:"Source"`
+	Active      string `json:"Active"`
 	SrcIP       string `json:"SrcIP"`
 	SrcPort     string `json:"SrcPort"`
 	DstIP       string `json:"DstIP"`
