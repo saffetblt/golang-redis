@@ -31,15 +31,16 @@ func main() {
 		DB:       0,  // use default DB
 	})
 
+	var rule Rule
+
 	SrcIP := "any"
 	SrcPort := "any"
 	DstIP := "any"
 	DstPort := "any"
 	Protocol := "MODBUS"
 	Function := "5"
-	var rule Rule
 
-	for i := 105010; i <= 105018; i++ {
+	for i := 105010; i <= 105019; i++ {
 		m, err := client.HGetAll(strconv.Itoa(i)).Result()
 		if err != nil {
 			fmt.Println(err)
